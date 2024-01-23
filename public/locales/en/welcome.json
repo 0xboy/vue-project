@@ -2,5 +2,6 @@
     "test":"Test",
     "title":"Gitloc Example",
     "subtitle": "You've successfully created a project with {vite} + {vue}.",
-    "hello":"Hello World"
+    "hello":"Hello World",
+    "Ahmet":"Ahmet"
 }
