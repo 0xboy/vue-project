@@ -1,7 +1,32 @@
 config:
-    defaultLocale: en
-    locales:
-        - en
-        - de
-    directories:
-        - public/locales
+  # The `defaultLocale` setting is used to determine which values will be translated. Gitloc detects changes only in the default locale files. Supported values for this field can be found in the "Supported locales" document.
+  # This field is required.
+  defaultLocale: en
+
+  # The `locales` setting is a list of all locales that are used for translating values. It must include the default locale. Supported values for this field can be found in the "Supported locales" document.
+  # This field is required.
+  locales:
+    - en
+    - de
+
+  # The `directories` setting is a list of repository directories that contain localization files. Do not use the "/" symbol at the beginning of the directory name.
+  # This field is required.
+  directories:
+    - public/locales
+
+  # The `branches` setting indicates which Git branches should be processed. You can use glob patterns for branch names.
+  # This field is optional.
+  branches:
+    - main
+
+  # The `result` setting indicates the translation result:
+  # - 'push' to commit changes to the base branch.
+  # - 'pull-request' to commit changes to a new branch and create a pull request to the base branch.
+  # Supported values: push, pull-request
+  # This field is optional with a default value of 'push'.
+  result: push
+
+  # The `format` setting indicates how the final JSON file will be formatted. You can use either the "tab" keyword or specify the number of spaces for formatting.
+  # Supported values for `format`: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, tab
+  # This field is optional with a default value of 2.
+  format: 2
